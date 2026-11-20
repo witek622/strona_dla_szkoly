@@ -65,6 +65,10 @@ function db() {
         seed($p);
     }
     ensureAppSchema($p);
+    if (!$new) {
+        seedDemoFixture($p);
+        seedDemoAllClasses($p);
+    }
     return $p;
 }
 

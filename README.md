@@ -8,7 +8,7 @@ Wymagania: PHP 8.0+ z rozszerzeniami `pdo_sqlite` i `mbstring`.
     cd strona_dla_szkoly
     php -S localhost:8000
 
-Otwórz http://localhost:8000. Przy pierwszym wywołaniu powstaje baza z danymi demonstracyjnymi. Baza i logi resetu hasła są domyślnie przechowywane poza katalogiem publicznym, w ukrytym katalogu obok katalogu projektu. W razie potrzeby ustaw `APP_DATA_DIR` na bezwzględną ścieżkę poza katalogiem publicznym. Istniejąca baza `data/dziennik.sqlite` i `data/mail.log` zostaną automatycznie przeniesione przy pierwszym żądaniu API.
+Otwórz http://localhost:8000. Przy pierwszym wywołaniu powstaje baza z danymi demonstracyjnymi. Przy pierwszym żądaniu API starsza istniejąca baza otrzyma brakujące dane demo; dotychczasowe dane nie są usuwane. Baza i logi resetu hasła są domyślnie przechowywane poza katalogiem publicznym, w ukrytym katalogu obok katalogu projektu. W razie potrzeby ustaw `APP_DATA_DIR` na bezwzględną ścieżkę poza katalogiem publicznym. Istniejąca baza `data/dziennik.sqlite` i `data/mail.log` zostaną automatycznie przeniesione przy pierwszym żądaniu API.
 
 Konta demo (hasło `haslo123`): admin@, dyrektor@, sekretariat@, nauczyciel@, wychowawca@, rodzic@, uczen@ `szkola.local`.
 Katalog `data/` ma dodatkową blokadę `.htaccess` dla Apache. Przed wdrożeniem zmień hasła demo i skonfiguruj HTTPS oraz pocztę do resetu hasła.
